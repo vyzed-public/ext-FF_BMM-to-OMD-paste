@@ -1,4 +1,4 @@
-# #2: Collect: Info on Existing Browser Extension Projects
+# #2: Collect: Info on existing related browser extension projects
 
 **State:** OPEN
 **Author:** vyzed
