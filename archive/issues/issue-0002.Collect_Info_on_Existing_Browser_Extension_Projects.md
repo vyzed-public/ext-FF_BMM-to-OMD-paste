@@ -9,6 +9,7 @@
 Searches found two existing related projects to use as benchmarks:
 - One is a published Firefox add-on (by [rom100main](https://addons.mozilla.org/en-US/firefox/user/13464738/))
   - Firefox add-on: https://addons.mozilla.org/en-US/firefox/addon/obsidian-bookmark/
+  - Project Repo: https://github.com/rom100main/Obsidian-Bookmarks-Browser-Extension
 - One is a not-yet-published GitHub repo (by Patrik Zúdel)
   - GitHub repo: https://github.com/patrikzudel/firefox-obsidian-bookmark
 
