@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container" id="mainContainer">
+    <h1 class="title">BMM-to-OMD</h1>
+
+    <label class="label">Source Folder:</label>
+    <div id="folder-tree" class="folder-tree"></div>
+    <div id="selected-folder" class="selected-folder">Selected: (none)</div>
+
+    <button id="copy-btn" class="copy-btn" disabled>Copy as Markdown</button>
+
+    <div id="status" class="status">Select preferred folder</div>
+  </div>
+
+  <script src="markdown.js"></script>
+  <script src="clipboard.js"></script>
+  <script src="popup.js"></script>
+</body>
+</html>
