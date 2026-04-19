@@ -5,7 +5,10 @@
   "description": "Copy bookmark folder contents as Obsidian-style Markdown, ready to paste.",
   "browser_specific_settings": {
     "gecko": {
-      "id": "bmm2omd@vyzed.net"
+      "id": "bmm2omd@vyzed.net",
+      "data_collection_permissions": {
+        "required": ["none"]
+      }
     }
   },
   "permissions": [
