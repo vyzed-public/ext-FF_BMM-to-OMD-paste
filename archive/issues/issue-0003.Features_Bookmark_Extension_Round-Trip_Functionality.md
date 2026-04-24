@@ -20,7 +20,7 @@ After some use of the bookmarking extention ecosystem, we realized we need to de
 ...which, after a bunch of extraneous chat & experiments, we concluded:
 
 > The chain of authority should be:
-> `OMD-to-BMM` — works correctly, respects Firefox BMM structure, don't touch it
+> `OMD-to-BMM` — works correctly, respects Firefox BMM structure, (especially separators), so don't touch it
 > `Tab-to-OMD` — defines the canonical format (bullet + em-dash + 2-space indent)
 > `BMM-to-OMD` — should be updated to output that same canonical format
 
