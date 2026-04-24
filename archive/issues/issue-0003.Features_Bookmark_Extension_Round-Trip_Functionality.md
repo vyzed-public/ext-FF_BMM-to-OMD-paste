@@ -17,8 +17,15 @@ After some use of the bookmarking extention ecosystem, we realized we need to de
 > Observe that the formats have changed.
 > Understand that we don't want that.
 
-...which, after a bunch of extraneous chat & experiments
+...which, after a bunch of extraneous chat & experiments, we concluded:
 
-...we packaged into this spec doc:
+> The chain of authority should be:
+> `OMD-to-BMM` — works correctly, respects Firefox BMM structure, don't touch it
+> `Tab-to-OMD` — defines the canonical format (bullet + em-dash + 2-space indent)
+> `BMM-to-OMD` — should be updated to output that same canonical format
+
+> So when `BMM-to-OMD` exports from Firefox back to Obsidian, instead of outputting 4-space indented child bullets for links, it should output 2-space indented em-dashes. That way the round-trip is format-stable.
+
+...so -- we packaged our findings into this spec doc:
 
 ### Spec: [SPEC-bookmark-round-trip-format.md](https://github.com/vyzed-public/ext-FF_BMM-to-OMD-paste/blob/main/docs/SPEC-bookmark-round-trip-format.md)
