@@ -16,3 +16,9 @@ After some use of the bookmarking extention ecosystem, we realized we need to de
 
 > Observe that the formats have changed.
 > Understand that we don't want that.
+
+...which, after a bunch of extraneous chat & experiments
+
+...we packaged into this spec doc:
+
+### Spec: [SPEC-bookmark-round-trip-format.md](https://github.com/vyzed-public/ext-FF_BMM-to-OMD-paste/blob/main/docs/SPEC-bookmark-round-trip-format.md)
