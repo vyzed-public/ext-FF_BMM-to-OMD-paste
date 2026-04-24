@@ -16,9 +16,11 @@ After some use of the bookmarking extention ecosystem, we realized we need to de
 
 > Let's look at these results from one cycle.
 
-> We used `Tab-to-OMD` to collect to three or four different bookmarks.
-> Then we used `OMD-to-BMM` to paste them into Firefox bookmark manager.
-> Then we used `BMM-to-OMD` to base them into Obsidian again.
+> 1) We used `Tab-to-OMD` to collect to three or four different bookmarks.
+
+> 2) Then we used `OMD-to-BMM` to paste them into Firefox bookmark manager.
+
+> 3) Then we used `BMM-to-OMD` to base them into Obsidian again.
 
 > Observe that the formats have changed.
 > Understand that we don't want that.
