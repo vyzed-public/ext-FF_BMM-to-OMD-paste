@@ -118,13 +118,19 @@ function countItems(nodes) {
  * and its nested tree of bookmark nodes.
  *
  * Output format:
- *   - FolderName              (root folder, bulleted plain text)
- *       - [Title](url)        (bookmark, indented under root)
- *       - SubfolderName       (subfolder, plain text bullet)
- *           - [Title](url)    (nested bookmark, indented)
- *       - ─────               (separator, unicode box-drawing line)
+ *   FolderName                (root folder, plain text — no bullet)
+ *   - SubfolderName           (subfolder, indented child bullet)
+ *     — [Title](url)          (bookmark, em-dash attributed link)
+ *     - NestedSubfolder       (nested subfolder)
+ *       — [Title](url)        (nested bookmark)
+ *     - ─────                 (separator, unicode box-drawing line)
  *
- * Uses 4-space indentation per nesting level.
+ * Uses 2-space indentation per nesting level.
+ * Root folder is plain text (no bullet) so OMD-to-BMM treats it as
+ * the destination folder name rather than a nested item.
+ * Bookmarks use U+2014 em-dash (—) instead of a bullet to distinguish
+ * them from subfolders — matching the canonical Tab-to-OMD format for
+ * round-trip stability.
  * Trailing newline appended for clean paste behavior.
  *
  * @param {string} folderName - The root folder's display name
@@ -134,10 +140,11 @@ function countItems(nodes) {
 function buildMarkdownFromFolder(folderName, nodes) {
     var lines = [];
 
-    /* Root folder name as bulleted item */
-    lines.push("- " + folderName);
+    /* Root folder name as plain text (no bullet) — OMD-to-BMM treats
+     * the first line as the destination folder name, not a nested item. */
+    lines.push(folderName);
 
-    /* Render children indented one level beneath root */
+    /* Render children at depth 1 — subfolders become indented children of root */
     renderNodes(nodes, 1, lines);
 
     return lines.join("\n") + "\n";
@@ -153,14 +160,14 @@ function buildMarkdownFromFolder(folderName, nodes) {
 function renderNodes(nodes, depth, lines) {
     var indent = "";
     for (var d = 0; d < depth; d++) {
-        indent += "    ";
+        indent += "  ";
     }
 
     for (var i = 0; i < nodes.length; i++) {
         var node = nodes[i];
 
         if (node.type === "bookmark") {
-            lines.push(indent + "- [" + node.title + "](" + node.url + ")");
+            lines.push(indent + "\u2014 [" + node.title + "](" + node.url + ")");
         } else if (node.type === "separator") {
             /* Unicode box-drawing separator — see file header for rationale */
             lines.push(indent + "- " + SEPARATOR_MARKER);
