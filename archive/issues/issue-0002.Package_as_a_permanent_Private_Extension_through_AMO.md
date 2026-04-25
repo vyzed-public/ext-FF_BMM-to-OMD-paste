@@ -6,6 +6,18 @@
 
 ---
 
+
+## The TL;DR: 
+
+### Guidance doc (markdown, not a dumb-ass MS doc): 
+* **[AMO Submissions: Errors, Gotchas, and Arcana](https://github.com/vyzed-public/ext-FF_BMM-to-OMD-paste/blob/main/docs/guidance.AMO-submissions.errors-and-arcana.md)**
+
+Key prerequisite: add `data_collection_permissions` to `manifest.json` before submission (see guidance doc §2.1).
+
+---
+
+### Previous History:
+
 We've been running & testing our extension in development mode:
 
 > **1. Temporary extension via `about:debugging`**
@@ -39,7 +51,3 @@ There's a third option worth mentioning: **Firefox Developer Edition** and **Fir
 
 ---
 
-## Guidance doc (markdown, not a dumb-ass MS doc): 
-* **[AMO Submissions: Errors, Gotchas, and Arcana](https://github.com/vyzed-public/ext-FF_BMM-to-OMD-paste/blob/main/docs/guidance.AMO-submissions.errors-and-arcana.md)**
-
-Key prerequisite: add `data_collection_permissions` to `manifest.json` before submission (see guidance doc §2.1).
