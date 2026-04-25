@@ -1,8 +1,9 @@
 # #2: Package: as a personal private extension through AMO
 
-**State:** OPEN
+**State:** CLOSED
 **Author:** vyzed
 **Created:** 2026-04-18T04:47:39Z
+**Closed:** 2026-04-25T05:52:04Z
 
 ---
 
