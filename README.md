@@ -26,3 +26,15 @@ Helpful Guidance: [guidance.AMO-submissions.errors-and-arcana.md](https://github
 ### For Development/Debugging:
 
 Use Firefox Internal URI:  `about:debugging#/runtime/this-firefox` to `[Load Temporary Add-On...]`
+
+---
+
+### Local Coding Env Notes (YMWV):
+
+This is purely for my convenience, as I have projects scattered across wide sands of dev dirs by the 4 winds over 30+ years.
+
+_"I... had a project... in `/tmp`"_ — Baroness Blixen
+
+```
+cd ~/my/files/local/lfs.00-Scratch/builds/from.repos/on.github/vyzed-public/ext-FF_Tab-to-OMD-paste
+```
