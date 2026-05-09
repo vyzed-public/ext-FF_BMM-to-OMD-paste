@@ -35,7 +35,7 @@ This is purely for my convenience, as I have projects scattered across wide sand
 
 _"I... had some code... in `/tmp`"_ — Baroness Blixen
 ```
-cd ~/my/files/local/lfs.00-Scratch/builds/from.repos/on.github/vyzed-public/ext-FF_Tab-to-OMD-paste
+cd ~/my/files/local/lfs.00-Scratch/builds/from.repos/on.github/vyzed-public/ext-FF_BMM-to-OMD-paste
 ```
 
 More handy (& commonly used) git tidbits (_"gitbits"?_) for the _"git-syntax/arcana-challenged"_:
