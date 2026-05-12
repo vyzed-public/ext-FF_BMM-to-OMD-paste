@@ -1,7 +1,7 @@
 {
   "manifest_version": 2,
   "name": "BMM-to-OMD Paste",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "Copy bookmark folder contents as Obsidian-style Markdown, ready to paste.",
   "browser_specific_settings": {
     "gecko": {
