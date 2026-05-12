@@ -120,17 +120,16 @@ function countItems(nodes) {
  * Output format:
  *   FolderName                (root folder, plain text — no bullet)
  *   - SubfolderName           (subfolder, indented child bullet)
- *     — [Title](url)          (bookmark, em-dash attributed link)
+ *     - [Title](url)          (bookmark, bullet link)
  *     - NestedSubfolder       (nested subfolder)
- *       — [Title](url)        (nested bookmark)
+ *       - [Title](url)        (nested bookmark)
  *     - ─────                 (separator, unicode box-drawing line)
  *
  * Uses 2-space indentation per nesting level.
  * Root folder is plain text (no bullet) so OMD-to-BMM treats it as
  * the destination folder name rather than a nested item.
- * Bookmarks use U+2014 em-dash (—) instead of a bullet to distinguish
- * them from subfolders — matching the canonical Tab-to-OMD format for
- * round-trip stability.
+ * Bookmarks use a standard `-` bullet; the markdown link syntax
+ * `[Title](url)` distinguishes them from plain subfolder entries.
  * Trailing newline appended for clean paste behavior.
  *
  * @param {string} folderName - The root folder's display name
@@ -167,7 +166,7 @@ function renderNodes(nodes, depth, lines) {
         var node = nodes[i];
 
         if (node.type === "bookmark") {
-            lines.push(indent + "\u2014 [" + node.title + "](" + node.url + ")");
+            lines.push(indent + "- [" + node.title + "](" + node.url + ")");
         } else if (node.type === "separator") {
             /* Unicode box-drawing separator — see file header for rationale */
             lines.push(indent + "- " + SEPARATOR_MARKER);
